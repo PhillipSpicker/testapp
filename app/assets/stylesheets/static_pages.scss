@@ -1,0 +1,90 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: Roboto, Verdana, Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+
+/**Bootstrap Navigation**/
+
+.navbar {
+	background-color: white;
+}
+
+.project-name {
+	text-transform: uppercase;
+}
+
+.project-name a {
+	color: #111;
+	text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #111;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #c7254e;
+}
+
+.anchor {
+	padding-top: 50px;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #111;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar:hover {
+    background-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #6b6258;
+}
+
+button .navbar-toggle {
+	background-color: #6b6258;
+}
+
+
+/** End of Bootstrap Navigation**/
+
+/** Index Page Welcome **/
+
+.index-welcome {
+	padding-top: 4em;
+	padding-bottom: 15em;
+	margin: 0 auto;
+	height: 100%;
+	text-align: center;
+	background-image: url("organic sups.jpg");
+	background-size: cover;
+	background-color: none;
+	color: white;
+}
+
+.transparent-box {
+	padding: 1em;
+	margin: 2em;
+	background: none; /* Fallback Color */
+	background: rgba(74, 74, 74, 0.6);
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+
+}
+
