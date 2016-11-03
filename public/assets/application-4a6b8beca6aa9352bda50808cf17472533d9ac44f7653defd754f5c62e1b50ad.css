@@ -1,0 +1,109 @@
+/* line 6, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+body {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+/* line 11, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3,
+h4 {
+  font-family: Roboto, Verdana, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/**Bootstrap Navigation**/
+/* line 22, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.navbar {
+  background-color: white;
+}
+
+/* line 26, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.project-name {
+  text-transform: uppercase;
+}
+
+/* line 30, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.project-name a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* line 35, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: #111;
+}
+
+/* line 39, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #c7254e;
+}
+
+/* line 43, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.anchor {
+  padding-top: 50px;
+}
+
+/* line 47, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #111;
+}
+
+/* line 51, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-toggle .icon-bar:hover {
+  background-color: #fff;
+}
+
+/* line 55, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #6b6258;
+}
+
+/* line 59, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+button .navbar-toggle {
+  background-color: #6b6258;
+}
+
+/** End of Bootstrap Navigation**/
+/** Index Page Welcome **/
+/* line 68, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.index-welcome {
+  padding-top: 4em;
+  padding-bottom: 15em;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  background-image: url("organic sups.jpg");
+  background-size: cover;
+  background-color: none;
+  color: white;
+}
+
+/* line 80, /home/phillip/Dokumente/my_first_app/Testapp/Testapp/app/assets/stylesheets/static_pages.scss */
+.transparent-box {
+  padding: 1em;
+  margin: 2em;
+  background: none;
+  /* Fallback Color */
+  background: rgba(74, 74, 74, 0.6);
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
