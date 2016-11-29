@@ -26,6 +26,7 @@
       <div class="navbar-brand project-name">
         <%= link_to "UPERFIT", root_path %>
       </div> <!-- end of project-name -->
+        
       </div> <!-- end of navabar-header -->
 
       <div class="navbar-collapse collapse">
@@ -33,7 +34,20 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", static_pages_about_path %></li>
           <li><%= link_to "Contact", static_pages_contact_path %></li>
+          <li>
+          <li><%= link_to "Products", products_path %></li>
+          <li>
+            <%= form_tag("/products", class: "navbar-form navbar-left", method: "get") do %>
+              <div class="form-group">
+                <%= label_tag(:q, "Search for:", class: "sr-only") %>
+                <%= text_field_tag(:q, nil, class: "form-control", placeholder:  "Find Products")%>
+                <%= button_tag("Search", class: "btn btn-default") %>
+              </div>
+            <% end %>
+          </li>
         </ul>
+        
+
       </div> <!-- nav -->
     </div> <!-- end nav container-->
   </nav> <!-- end navbar-->
