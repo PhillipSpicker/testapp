@@ -37,6 +37,7 @@
           <li>
           <li><%= link_to "Products", products_path %></li>
           <li>
+          <div class="col-xs-12">
             <%= form_tag("/products", class: "navbar-form navbar-left", method: "get") do %>
               <div class="form-group">
                 <%= label_tag(:q, "Search for:", class: "sr-only") %>
@@ -44,6 +45,7 @@
                 <%= button_tag("Search", class: "btn btn-default") %>
               </div>
             <% end %>
+          </div>
           </li>
         </ul>
         
