@@ -1,28 +1,36 @@
-<h1>Contact UperFit</h1>
-<p>Phillip Spicker</p>
-<address>Address: Siebachstraße 65,
-50733 Cologne </adress><br>
-<mail>Mail: phillip.spicker@gmx.de</mail>
+<div class="container">
 
+  <h1>Contact UperFit</h1>
+  
 
-<%= flash[:notice] %>
+  <%= flash[:notice] %>
 
-<%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
-  <div class="col-md-4">
-    <div class="form-group">
-      <%= label_tag :name %>
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
-    </div>      
-    <div class="form-group">
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      </div>      
+      <div class="form-group">
+        <%= label_tag :email, "Email Address" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      </div>      
     </div>
-    <div class="form-group">
-      <%= label_tag :message %>
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-    </div>      
   </div>
-</div>
-<%= submit_tag "Send" %>   
-<% end %>
+  <%= submit_tag "Send" %>   
+  <% end %>
+
+  <br>
+
+  <p>Phillip Spicker</p>
+  <address>Address: Siebachstraße 65,
+  50733 Cologne </adress><br>
+  <mail>Mail: phillip.spicker@gmx.de</mail>
+
+
+</div> <!--end of container -->
