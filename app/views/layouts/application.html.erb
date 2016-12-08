@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
   <body data-spy="scroll" data-target=".navbar">
-<!--navbar starts here-->
+  
+  <!--navbar starts here-->
      <!-- Collect the nav links, forms, and other content for toggling -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -30,11 +31,16 @@
       </div> <!-- end of navabar-header -->
 
       <div class="navbar-collapse collapse">
+
+        
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "About", static_pages_about_path %></li>
-          <li><%= link_to "Contact", static_pages_contact_path %></li>
-          <li><%= link_to "Products", products_path %></li>
+          <!-- alert on sign-in -->
+          <li class="notice-padding"><%= notice %></li>
+          <li class="alert-padding"><%= alert %></li>
+          <li><%= link_to "HOME", root_path %></li>
+          <li><%= link_to "ABOUT", static_pages_about_path %></li>
+          <li><%= link_to "CONTACT", static_pages_contact_path %></li>
+          <li><%= link_to "PRODUCTS", products_path %></li>
           <li>
             <div class="col-xs-12">
               <%= form_tag("/products", class: "navbar-form navbar-left", method: "get") do %>
@@ -42,6 +48,11 @@
                   <%= label_tag(:q, "Search for:", class: "sr-only") %>
                   <%= text_field_tag(:q, nil, class: "form-control", placeholder:  "Find Products")%>
                   <%= button_tag("Search", class: "btn btn-default") %>
+                  <% if user_signed_in? %>
+                    <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete, class: "btn") %>
+                  <% else %>
+                    <%= link_to('LOGIN', new_user_session_path, class: "btn") %>
+                  <% end %>
                 </div>
               <% end %>
             </div>
@@ -49,10 +60,11 @@
         </ul>
         
 
+
       </div> <!-- nav -->
     </div> <!-- end nav container-->
   </nav> <!-- end navbar-->
-
+  
   <body>
     <%= yield %>
     <footer class="navbar navbar-default navbar-fixed-bottom">
