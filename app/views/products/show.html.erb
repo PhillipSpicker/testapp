@@ -1,41 +1,46 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <h1 class="center-heading"><%= @product.name %></h1>
+  <div class="row">
+    <div class="col-sm-4 col-md-4">
+      <%= image_tag(@product.image_url, class: "img-responsive") %>
+    </div>
+
+    <div class="col-sm-8 col-md-8">
+      <br>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </div>
   
-  <div class="col-sm-4 col-md-4">
-    <%= image_tag(@product.image_url, class: "img-responsive") %>
-  </div>
 
-  <div class="col-sm-8 col-md-8">
+    <div class="col-sm-8 col-md-8">
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>
+    </div>
+
+    <div class="col-sm-8 col-md-8">
+      <br>
+      <strong>Price:</strong>
+      <%= @product.price %>
+    </div>
+
+    <div class="col-sm-8 col-md-8">
+      <br>
+      <p> <strong> Average Rating: </strong> <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    </div>
+  </div>
+  
+  <div class="row">
     <br>
-    <strong>Description:</strong>
-    <%= @product.description %>
+    <div class="col-sm-6 col-md-6">
+      <%= render 'new_comment', product: @product %>
+    </div>
   </div>
 
-  <div class="col-sm-8 col-md-8">
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
-  </div>
-
-  <div class="col-sm-8 col-md-8">
-    <br>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </div>
-
-  <div class="col-sm-12 col-md-12">
-    <br>
-    <%= @product.highest_rating_comment %>
-
-    <%= @product.lowest_rating_comment %>
-  </div>
-
-  <div class="col-sm-12 col-md-12">
-    <%= render 'new_comment', product: @product %>
-  </div>
-
-  <div class="col-sm-12 col-md-12">
-    <%= render 'comments', product: @product %>
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <%= render 'comments', product: @product %>
+    </div>
   </div>
 
 </div>

@@ -20,12 +20,14 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC")
+    # average rating for test purposes: @average_rating = @product.comments.average(:rating).to_f
   end
 
   # GET /products/new
   def new
     @product = Product.new
   end
+
 
   # GET /products/1/edit
   def edit
@@ -62,7 +64,7 @@ class ProductsController < ApplicationController
   end
 
   # DELETE /products/1
-  # DELETE /products/1.json
+  # DELETE /products/1.json   
   def destroy
     @product.destroy
     respond_to do |format|
