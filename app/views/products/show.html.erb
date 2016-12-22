@@ -30,4 +30,12 @@
     <%= @product.lowest_rating_comment %>
   </div>
 
+  <div class="col-sm-12 col-md-12">
+    <%= render 'new_comment', product: @product %>
+  </div>
+
+  <div class="col-sm-12 col-md-12">
+    <%= render 'comments', product: @product %>
+  </div>
+
 </div>
