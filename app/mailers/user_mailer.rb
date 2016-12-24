@@ -15,5 +15,12 @@ class UserMailer < ApplicationMailer
   	UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
+  def welcome(user)
+    @appname = "Uperfit"
+    mail( :to => user.email,
+          :subject => "Welcome to #{@appname}!")
+  end
+
+
 end
 
