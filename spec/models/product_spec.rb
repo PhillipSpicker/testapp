@@ -3,7 +3,8 @@ require 'rails_helper'
 describe Product do
   before do
     @product = Product.create!(name: "Onnit Hemp Force Active")
-    @user = User.create!(email: "test@mail.de", password: "testpassword")
+    #@user = User.create!(email: "test@mail.de", password: "testpassword")
+    @user = FactoryGirl.create(:user)
     @product.comments.create!(rating: 1, user: @user, body: "Awful product")
     @product.comments.create!(rating: 3, user: @user, body: "Mediocre product")
     @product.comments.create!(rating: 5, user: @user, body: "Great product")
