@@ -1,7 +1,7 @@
-class ChangePriceToDecimal < ActiveRecord::Migration[5.0]
+class ChangePriceToInteger < ActiveRecord::Migration[5.0]
   def self.up
     change_table :products do |t|
-      t.change :price, :decimal, :precision => 10, :scale => 2
+      t.change :price, :integer
     end
   end
   def self.down
@@ -10,3 +10,4 @@ class ChangePriceToDecimal < ActiveRecord::Migration[5.0]
     end
   end
 end
+
