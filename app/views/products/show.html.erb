@@ -27,7 +27,11 @@
     <div class="col-sm-8 col-md-8">
       <br>
       <p> <strong> Average Rating: </strong> <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-    </div>
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+
+    </div> 
   </div>
   
   <div class="row">
