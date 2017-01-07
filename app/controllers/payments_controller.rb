@@ -8,7 +8,7 @@ class PaymentsController < ApplicationController
 	  @user = current_user
       charge = Stripe::Charge.create(
         :amount => @product.price, # amount in cents, again
-        :currency => "eur",
+        :currency => "usd",
         :source => token,
       	:description => params[:stripeEmail]
       )
