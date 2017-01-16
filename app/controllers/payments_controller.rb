@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     @product = Product.find(params[:product_id])
@@ -28,4 +29,10 @@ class PaymentsController < ApplicationController
 
 	  redirect_to product_path(@product)
   end
+
+  private
+	def payment_params
+	  params.require(:payment).permit()
+	end
+
 end

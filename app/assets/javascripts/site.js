@@ -8,3 +8,12 @@ $(document).on('turbolinks:load', function(){
       }
     });
 });
+
+$(document).on('turbolinks:load', function(){
+  $('.img-zoom').elevateZoom({
+    zoomType				: "lens",
+    lensShape : "round",
+    lensSize    : 200
+  });
+
+});

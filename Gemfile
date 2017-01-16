@@ -67,3 +67,5 @@ group :development, :test do
 end
 
 gem 'stripe'
+
+gem "brakeman", :require => falsea
