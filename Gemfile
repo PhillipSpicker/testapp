@@ -68,4 +68,4 @@ end
 
 gem 'stripe'
 
-gem "brakeman", :require => falsea
+gem "brakeman", :require => false
