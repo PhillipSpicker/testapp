@@ -3,7 +3,7 @@
   <% if signed_in? %>
     <div class="form-new">
     <h4 class="row">Add a review:</h4>
-    <%= form_for([@product, @product.comments.build]) do |f| %>
+    <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
       
         <div class="form-group row">
           <%= f.label :body, "Comments", class: "controll-label" %><br>
