@@ -24,6 +24,9 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
+  # run ActionCable within the same process as the rest of your app under the route /cable
+  mount ActionCable.server => '/cable'
+
 
 end
 
