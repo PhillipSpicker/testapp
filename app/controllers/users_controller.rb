@@ -3,9 +3,10 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   # GET /users
-  # GET /users.json
+  # GET /users.json#
+  include UsersHelper
   def index
-    @users = User.all
+    fetch_users
   end
 
   # GET /users/1
