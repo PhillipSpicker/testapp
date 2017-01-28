@@ -96,5 +96,5 @@ Rails.application.configure do
                     }
   # Heroku broadcasting with Action Cable
   config.web_socket_server_url = "wss://uperfitnew.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://uperfitnew.herokuapp.com', 'http://your-app-name.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://uperfitnew.herokuapp.com', 'http://uperfitnew.herokuapp.com']
 end
